@@ -1,0 +1,102 @@
+.header{
+    &__logo{
+        width: 206px;
+        object-fit: contain;
+
+        @media(max-width: $mq5){ width: 150px; }
+    }
+    &-rc{
+        @include flex(flex, space-between, center, row, nowrap);
+        @media(max-width: $mq2){ 
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: var(--gap);
+            background-color: $white;
+            border-bottom: 1px solid rgba($gray-1, .5);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &__trigger{
+        display: none;
+        @media(max-width: $mq2){ display: inherit; }
+
+        &-icon{
+            width: 25px;
+            object-fit: contain;
+        }
+    }
+}
+.main-menu{
+    &__list{
+        display: flex;
+        justify-content: center;
+
+        @media(max-width: $mq2){ 
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    &__link{
+        margin: 0 15px;
+        transition: $transition;
+
+        @media(max-width: $mq2){ 
+            margin: 10px 0;
+            display: block;
+        }
+        &:hover,
+        &.active{
+            color: $black;
+            transition: $transition;
+        }
+    }
+}
+.info{
+    display: flex;
+    align-items: center;
+
+    @media(max-width: $mq2){ display: none; }
+
+    &__call{
+        width: 46px;
+        height: 46px;
+        margin: 15px;
+        padding: 8px;
+        background-color: $purple-2;
+        border-radius: 50%;
+
+        &-icon{
+            width: 100%;
+            height: 100%;
+            opacity: .925;
+            transition: $transition;
+
+            &:hover{
+                opacity: 1;
+                transition: $transition;
+            }
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 141px;
+        height: 50px;
+
+        font-weight: 400;
+        border-radius: 100px;
+        background-color: $purple-2;
+        color: $white;
+        transition: $transition;
+
+        &:hover{
+            font-weight: 600;
+            color: $white;
+            transition: $transition;
+        }
+    }
+}

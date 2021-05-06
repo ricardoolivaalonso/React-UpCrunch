@@ -1,0 +1,92 @@
+.plans{
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+        place-items: center;
+        grid-gap: 20px;
+        height: 200px;
+        border-radius: 20px;
+        background-color: $white-2;
+
+        @include f18();
+        line-height: 1.23;
+        transition: $transition;
+
+        @media(max-width: $mq3){
+            grid-template-columns: 1fr;
+            max-width: 320px;
+            height: 400px;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        @media(max-width: $mq4){ font-size: 16px; }
+        @media(max-width: $mq5){
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &:hover{
+            cursor: pointer;
+            box-shadow: 0 20px 40px 10px rgba(black, 0.07) ;
+            background-color: $white;
+            transition: $transition;
+        }
+
+        &--title{
+            height: auto;
+            place-items: start;
+            margin-bottom: 20px;
+            background-color: $white;
+
+            @media(max-width: $mq3){ display: none; }
+
+            &:hover{
+                cursor: none;
+                box-shadow: none;
+                background-color: $white;
+            }
+        }
+    }
+        &__title{
+            font-size: 14px;
+            font-weight: 600;
+            color: $purple-1;
+            margin-left: 30px;
+
+            &:nth-of-type(4){
+                text-align: center;
+                width: 60%;
+            }
+        }
+        &__icon{
+            max-height: 66px;
+            object-fit: contain;
+        }
+        &__product{
+            &-title{
+                @include f24();
+                margin-bottom: 10px;
+                font-weight: 600;
+                line-height: 1.25;
+                color: $black;
+
+                @media(max-width: $mq3){
+                    text-align: center;
+                    @include f20();
+                }
+            }
+            &-description{
+                max-width: 300px;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.3125;
+                color: $gray-1;
+
+                @media(max-width: $mq3){
+                    text-align: center;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba($gray-1, .4);
+                }
+            }
+        }
+}

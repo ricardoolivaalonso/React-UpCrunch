@@ -1,0 +1,53 @@
+.call{
+    background-color: $purple-2;
+    background-image: url("../../img/call-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+
+    &__title{
+        max-width: 250px;
+        font-size: 50px;
+        font-weight: 600;
+        color: $white;
+
+        @media(max-width: $mq3){
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+    &-form{
+        display: flex;
+        flex-direction: column;
+        
+        &__input,
+        &__button{
+            height: 60px;
+            width: 300px;
+            
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            border-radius: 100px;
+            color: $black;
+            background-color: $white-2;
+        }
+        &__input{ padding: 0 10px;}
+        &__button{
+            margin: 10px 0;
+            @include f19();
+            background-color: black;
+            color: $white;
+            transition: $transition;
+
+            &:hover{
+                transition: $transition;
+                background-color: $black;
+            }
+        }
+    }
+
+}

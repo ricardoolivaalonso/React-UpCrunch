@@ -1,0 +1,25 @@
+.ideas{
+    &__icon{
+        width: 120px;
+        object-fit: contain;
+    }
+    &__title{
+        @include f60();
+        margin: 30px 0 50px;
+        text-align: center;
+        line-height: 1;
+        color: $black;
+    }
+    &__description{
+        @include f20();
+        margin: 30px 0 50px;
+        color: $gray-2;
+        line-height: 1.55;
+        text-align: center;
+    }
+    &__link{
+        font-size: 21px;
+        font-weight: 400;
+        color: $cyan;
+    }
+}

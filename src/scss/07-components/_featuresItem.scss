@@ -1,0 +1,26 @@
+.features{
+     &__item{
+        max-width: 500px;
+        margin-bottom: 100px;
+
+        @media(max-width: $mq3){ text-align: center;}
+        @media(max-width: $mq4){
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+        &__img{
+            width: 100%;
+            max-width: 355px;
+        }
+        &__title{
+            @include f26();
+            margin: 20px 0;
+            color: $purple-2;
+        }
+        &__description{
+            @include f20();
+            line-height: 1.4;
+            color: $gray-1;
+        }
+}

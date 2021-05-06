@@ -1,0 +1,131 @@
+.motion-container{
+    // max-width: var(--max-width);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    @include flex(flex, space-between, center, row, nowrap);
+    width: 100%;
+    height: 60px;
+    margin-top: var(--gap-v);
+    padding: 0 var(--gap);
+    max-width: var(--max-width);
+    position: relative;
+    z-index: 100;
+}
+.hero{
+    @include flex(flex, space-between, center, row, nowrap);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 150px var(--gap) 120px;
+    z-index: 1;
+    @media(max-width: $mq2){ padding: 50px var(--gap) 40px; }
+
+    &--alt{
+        @include flex(flex, center, center, column, wrap);
+        padding: 100px var(--gap);
+    }
+}
+.summary{
+    width: 100%;
+    max-width: var(--max-width);
+
+    &-mc{
+        @include flex(flex, center, center, row, nowrap);
+        width: 100%;
+        padding: 100px var(--gap);
+
+        @media(max-width: $mq5){ padding: 50px var(--gap); }
+    }
+}
+.features{
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 150px var(--gap);
+
+    @media(max-width: $mq4){ flex-direction: column; }
+    @media(max-width: $mq5){ padding: 0px var(--gap); }
+
+    &--alt{ padding-bottom: 0px; }
+}
+.testimonials{
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 var(--gap);
+
+    @media(max-width: $mq4){ flex-direction: column; }
+
+    &-mc{
+        @include flex(flex, center, center, row, nowrap);
+        width: 100%;
+        padding: 75px 0;
+        background-color: $white-2;
+    }
+}
+.plans{
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 var(--gap);
+
+    @media(max-width: $mq3){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media(max-width: $mq4){ justify-content: space-between; }
+
+    &--alt{ margin-bottom: 100px;}
+}
+.ideas{
+    width: 100%;
+    max-width: var(--max-width);
+}
+.ideas{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    max-width: 660px;
+    padding: 100px var(--gap) 150px;
+
+    @media(max-width: $mq5){ padding: 100px var(--gap) 0px; }
+
+    &-mc{
+        @include flex(flex, center, center, row, nowrap);
+        width: 100%;
+        margin: 50px 0;
+        background-image: url("../../img/ideas-bg.png");
+    }
+}
+.call{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width2);
+    height: 250px;
+    padding: 50px 150px;
+    margin-bottom: 150px;
+
+    @media(max-width: $mq3){
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 50px;
+        max-width: calc(100% - 30px);
+        margin: 50px 15px 100px;
+    }
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr minmax(700px, 1fr);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: var(--gap);
+
+    @media(max-width: $mq1){ padding: var(--gap) calc(var(--gap) * 2); }
+    @media(max-width: $mq2){ padding: var(--gap) calc(var(--gap) * 4); }
+    @media(max-width: $mq3){ grid-template-columns: 1fr; padding: var(--gap) calc(var(--gap) * 4); }
+    @media(max-width: $mq4){ padding: var(--gap); }
+}

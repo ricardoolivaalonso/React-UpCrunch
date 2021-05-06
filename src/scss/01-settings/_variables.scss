@@ -1,0 +1,37 @@
+/***** Colors *****/
+/******************/
+$black: #333333;
+$white: #ffffff;
+$white-2: #f6f6f9;
+$purple-1: #806bff;
+$purple-2: #715af7;
+$gray-1: #919bb0;
+$gray-2: #5e5773;
+$green: #51b37e;
+$cyan: #22d7ff;
+$cyan-hover: #00FFFF;
+/***** Queries *****/
+/******************/
+$mq1: 1200px;
+$mq2: 1000px;
+$mq3: 980px;
+$mq4: 760px;
+$mqfoo: 640px;
+$mq5: 480px;
+/***** Units *****/
+/******************/
+$transition: 200ms ease-in;
+
+:root{
+    --gap: 30px;
+    --gap-v: 30px;
+    --max-width: 1220px;
+    --max-width2: 1170px;
+
+    @media(max-width: $mq1){ --gap: 15px; }
+    @media(max-width: $mq3){
+        --gap: 15px;
+        --gap-v: 10px;
+    }
+    @media(max-width: $mq4){ --gap: 25px; }
+}

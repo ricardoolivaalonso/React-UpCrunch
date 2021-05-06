@@ -1,0 +1,53 @@
+.plans{
+    &__main{
+        &-title{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 180px 0 150px;
+
+            @media(max-width: $mq3){
+                flex-direction: column;
+                align-items: center;
+                margin: 120px 0;
+                text-align: center;
+            }
+        }
+        &-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            margin-left: 30px;
+
+            @include f19();
+            color: $white;
+            background-color: $cyan;
+            border-radius: 100px;
+            transition: $transition;
+
+            &:hover{
+                background-color: $cyan-hover;
+                transition: $transition;
+            }
+
+            @media(max-width: $mq3){
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+    &__list{
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+
+        @media(max-width: $mq3){
+            grid-template-columns: 1fr 1fr;
+            place-items: start center;
+            max-width: 80%;
+        }
+        @media(max-width: $mq4){ max-width: 100%; }
+        @media(max-width: $mqfoo){ grid-template-columns: 1fr; }
+    }
+}

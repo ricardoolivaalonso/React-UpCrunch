@@ -1,0 +1,76 @@
+.summary{
+    &-mc{
+        position: relative;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: calc((100% / 26) * 11.6);
+            height: 100%;
+
+            background-image: url("../../img/features-bg.png");
+            background-repeat: repeat;
+            background-size: 26px;
+            background-position: 100% 50%;
+            opacity: .3;
+        }
+    }
+    &-lc{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        width: 100%;
+        margin-bottom: 100px;
+
+        @media(max-width: $mq4){ grid-template-columns: 1fr 1fr;}
+        @media(max-width: $mqfoo){
+            grid-template-columns: 1fr; 
+            margin-bottom: 50px; 
+        }
+    }
+    &-rc{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @media(max-width: $mq2){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+        &__rating{
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+
+            @media(max-width: $mq2){ margin-bottom: 20px; }
+
+            &-icon{
+                width: 42px;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+            &-title{
+                @include f24();
+                color: $purple-2;
+            }
+        }
+        &__star{
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-left: 1px solid rgba($gray-1, .4);
+
+            &-title{
+                @include f24();
+                font-weight: 300;
+                color: $black;
+                margin-right: 10px;
+            }
+            &-icon{
+                width: 38px;
+                object-fit: contain;
+            }
+        }
+}

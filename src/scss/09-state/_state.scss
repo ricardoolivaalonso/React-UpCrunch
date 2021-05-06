@@ -1,0 +1,9 @@
+/******************/
+.is-menu-visible{
+    opacity: 1;
+    visibility: visible;
+    transition: 
+        opacity $transition,
+        visibility $transition
+    ;
+}

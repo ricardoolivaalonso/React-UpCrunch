@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe1c5e98c214e0339cc_Odudo-BoldOblique.otf') format('opentype');
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe1c5e98c255c0339cd_Odudo-LightOblique.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe14b55b061d74638f5_Odudo-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe1c017e6840c0d5620_Odudo-RegularOblique.otf') format('opentype');
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe14ebf0351a2b2ac40_Odudo-SemiBold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe1946b128816c44e1b_Odudo-SemiBoldOblique.otf') format('opentype');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe15aa39821190fdc7e_Odudo-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Odudo';
+	src: url('../../fonts/5e138fe15aa39831770fdc7d_Odudo-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+// -------------------------
+@mixin f14(){
+	font-size: 14pX;
+	font-weight: 300;
+}
+@mixin f18(){
+	font-size: 18px;
+	font-weight: 300;
+}
+@mixin f19(){
+	font-size: 19px;
+	font-weight: 400;
+}
+@mixin f20(){
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+@mixin f24(){
+	font-size: 24px;
+	font-weight: 400;
+}
+@mixin f26(){
+	font-size: 26px;
+	font-weight: 400;
+}
+@mixin f60(){
+	font-size: 60px;
+	font-weight: 300;
+	line-height: 1;
+
+	@media(max-width: $mq2){ font-size: 50px;}
+	@media(max-width: $mq3){ font-size: 40px; }
+}

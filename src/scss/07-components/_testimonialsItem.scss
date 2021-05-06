@@ -1,0 +1,29 @@
+.testimonials{
+    &__item{ margin-bottom: 50px; }
+        &__star{
+            width: 100%;
+            max-width: 30px;
+            margin-right: 10px;
+        }
+        &__intro{
+            max-width: 600px;
+            margin: 30px 0 10px;
+        }
+        &__description{
+            width: 100%;
+            margin: 40px 0 30px;
+
+            @include f20();
+            line-height: 1.25;
+            font-style: italic;
+            color: $gray-1;
+
+            @media(max-width: $mq4){ font-size: 18px; }
+        }
+        &__author{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: $black;
+        }
+}
