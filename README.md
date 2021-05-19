@@ -7,5 +7,7 @@
 - bem
 - itcss
 - atomic
+- react router
+- framer motion
 
 Live: https://ricardoolivaalonso-react01.herokuapp.com
